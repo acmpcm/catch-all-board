@@ -1,0 +1,367 @@
+{
+  "title": "Catch-all",
+  "updated": "2026-09-20",
+  "lanes": [
+    {
+      "id": "do",
+      "label": "Do \u00b7 now",
+      "color": "#ff6b4a",
+      "groups": [
+        {
+          "id": "work",
+          "label": "Work",
+          "items": [
+            {
+              "id": "conti-reply",
+              "title": "Continental Tire",
+              "detail": "Reply to Tobias on Business Team Challenge schedule change",
+              "who": "You \u00b7 Sterling Hill",
+              "privacy": "work"
+            },
+            {
+              "id": "hinds-quote",
+              "title": "Hinds CC quote",
+              "detail": "Approve or decline Oct 6 challenge course",
+              "who": "You \u00b7 Sterling Hill",
+              "privacy": "work"
+            },
+            {
+              "id": "bootcamp-gaps",
+              "title": "AI Bootcamp 2",
+              "detail": "Catalyzer attendance gaps Nikki flagged",
+              "who": "You or Nikki \u00b7 ConnectMS",
+              "privacy": "work"
+            },
+            {
+              "id": "accelerate",
+              "title": "Accelerate",
+              "detail": "Whova orders + schedule with Innovate.ms",
+              "who": "You \u00b7 ConnectMS",
+              "privacy": "work"
+            }
+          ]
+        },
+        {
+          "id": "estate",
+          "label": "Estate",
+          "items": [
+            {
+              "id": "house",
+              "title": "House keep-current",
+              "detail": "JC utilities, insurance, mortgage",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "ssa",
+              "title": "SSA notice",
+              "detail": "Confirm funeral home filed; else 1-800-772-1213",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "amazon",
+              "title": "Amazon cancel",
+              "detail": "Dad's account, deceased process, no his login",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "car",
+              "title": "Car title",
+              "detail": "Keep insured; find paper title; no sell until Miller path clear",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "ecu",
+              "title": "ECU $211k",
+              "detail": "Note where certified check was deposited",
+              "who": "You",
+              "privacy": "personal"
+            }
+          ]
+        },
+        {
+          "id": "life",
+          "label": "Life \u00b7 family",
+          "items": [
+            {
+              "id": "prints",
+              "title": "Photos \u2192 prints",
+              "detail": "Pick and order",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "ncdmv",
+              "title": "NC registration",
+              "detail": "Renew via myNCDMV",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "criswell",
+              "title": "Criswell",
+              "detail": "Wed Oct 7, 1:00 PM",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "zelle",
+              "title": "Chase Zelle",
+              "detail": "Confirm receive details before expiry",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "ju",
+              "title": "P \u00b7 JU",
+              "detail": "Beard / Gergen / committee / next steps",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "tmobile",
+              "title": "P \u00b7 phone",
+              "detail": "Get T-Mobile working",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "obday",
+              "title": "O \u00b7 birthday",
+              "detail": "Plans",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "omoney",
+              "title": "O \u00b7 money",
+              "detail": "Future money setup",
+              "who": "You",
+              "privacy": "personal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "buy",
+      "label": "Buy",
+      "color": "#3dd6c6",
+      "items": [
+        {
+          "id": "foil",
+          "title": "Aluminum foil",
+          "detail": "Ready when you shop",
+          "privacy": "personal"
+        },
+        {
+          "id": "stools",
+          "title": "Bar stools",
+          "detail": "With Deal Scout (compare only)",
+          "who": "Deal Scout",
+          "privacy": "personal"
+        },
+        {
+          "id": "phone-buy",
+          "title": "Phone buys (if go)",
+          "detail": "Port 704, possible iPhone 18 Pro On Us, 15 for stepdaughter",
+          "privacy": "personal"
+        },
+        {
+          "id": "phone-clean",
+          "title": "Phone cleanup",
+          "detail": "Unlock/sell 17 Pro; lost 16 Pro; cancel Verizon iPad; LTE Home TBD",
+          "privacy": "personal"
+        }
+      ]
+    },
+    {
+      "id": "look",
+      "label": "Look into",
+      "color": "#7c9cff",
+      "items": [
+        {
+          "id": "trident",
+          "title": "Trident payoff",
+          "detail": "Map options, recommend path",
+          "privacy": "personal"
+        },
+        {
+          "id": "phone-map",
+          "title": "Phone plan map",
+          "detail": "Verizon + T-Mobile \u2192 go / park",
+          "privacy": "personal"
+        },
+        {
+          "id": "stem",
+          "title": "STEM / MS Robotics D&O",
+          "detail": "Seth renewal follow-up",
+          "privacy": "work"
+        },
+        {
+          "id": "hoa",
+          "title": "JC HOA #129",
+          "detail": "Covenants Priscilla sent",
+          "privacy": "personal"
+        },
+        {
+          "id": "car-path",
+          "title": "Car title path",
+          "detail": "Affidavit vs letters vs wait with muniment",
+          "privacy": "personal"
+        },
+        {
+          "id": "life-docs",
+          "title": "Philip + Amber life docs",
+          "detail": "Wills / testament (not dad's estate)",
+          "privacy": "personal"
+        },
+        {
+          "id": "azores",
+          "title": "Azores",
+          "detail": "Deepen when dates/who/budget known",
+          "privacy": "personal"
+        },
+        {
+          "id": "ancestry",
+          "title": "Ancestry",
+          "detail": "Brookman / McGinnis / Smith",
+          "privacy": "personal"
+        },
+        {
+          "id": "charlotte",
+          "title": "Charlotte construction",
+          "detail": "Status when you drop it",
+          "privacy": "personal"
+        },
+        {
+          "id": "leesburg",
+          "title": "Leesburg VA RFP",
+          "detail": "Only if interested",
+          "privacy": "work"
+        }
+      ]
+    },
+    {
+      "id": "waiting",
+      "label": "Waiting",
+      "color": "#ffc857",
+      "items": [
+        {
+          "id": "miller",
+          "title": "Miller + Coinbase",
+          "detail": "Muniment ~4 mo; Case #27523536 email sent 9/20",
+          "privacy": "personal"
+        },
+        {
+          "id": "pod",
+          "title": "POD claims",
+          "detail": "First Bank (2); Primerica mail; VRS/Securian #1920815",
+          "privacy": "personal"
+        },
+        {
+          "id": "therabody",
+          "title": "Therabody \u2192 mask",
+          "detail": "Recall conf 7NQWVWJ7; watch $100 credit",
+          "privacy": "personal"
+        },
+        {
+          "id": "cal",
+          "title": "Calendar",
+          "detail": "ScaleUp Oct 14; MEDC Nov 4\u20135; Nissan ~Sep 22",
+          "privacy": "work"
+        },
+        {
+          "id": "money-in",
+          "title": "Money inbound",
+          "detail": "State Farm; Duke $1.3k+; dad SF $147; Oakmont",
+          "privacy": "personal"
+        }
+      ]
+    },
+    {
+      "id": "later",
+      "label": "Later",
+      "color": "#c084fc",
+      "items": [
+        {
+          "id": "plaud",
+          "title": "Plaud Unfiled",
+          "detail": "Keep batching",
+          "who": "HBIC",
+          "privacy": "work"
+        },
+        {
+          "id": "portal",
+          "title": "Leadership portal",
+          "detail": "Build",
+          "privacy": "work"
+        },
+        {
+          "id": "sbdc",
+          "title": "SBDC build",
+          "detail": "Library, grant-mod, intakes",
+          "privacy": "work"
+        },
+        {
+          "id": "dba",
+          "title": "DBA year 3",
+          "detail": "Belhaven \u00b7 assignment TBD",
+          "privacy": "personal"
+        },
+        {
+          "id": "phone-move",
+          "title": "Phone move",
+          "detail": "After Look into decision",
+          "privacy": "personal"
+        }
+      ]
+    },
+    {
+      "id": "parked",
+      "label": "Parked",
+      "color": "#6b7280",
+      "items": [
+        {
+          "id": "homestead",
+          "title": "Homestead Cole Road / Flag Pond",
+          "detail": "No offers until attorney moving",
+          "privacy": "personal"
+        },
+        {
+          "id": "expand-jc",
+          "title": "Expand JC house",
+          "detail": "Cannot grow",
+          "privacy": "personal"
+        },
+        {
+          "id": "wyoming",
+          "title": "Wyoming client campus",
+          "detail": "",
+          "privacy": "work"
+        },
+        {
+          "id": "geo4",
+          "title": "Fourth geography",
+          "detail": "Score JC vs rural MS first",
+          "privacy": "personal"
+        },
+        {
+          "id": "offgrid",
+          "title": "Off-grid hotel",
+          "detail": "Private lodge 8\u201312 instead",
+          "privacy": "personal"
+        },
+        {
+          "id": "plaud-bot",
+          "title": "Separate Plaud bot",
+          "detail": "Until recipe stable",
+          "privacy": "work"
+        }
+      ]
+    }
+  ]
+}
