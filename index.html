@@ -12,10 +12,19 @@
     <header class="header">
       <div class="header-left">
         <div class="logo"><span class="logo-dot"></span>Catch-all</div>
-        <div class="meta">Loading…</div>
+        <div class="meta" id="meta">Loading…</div>
+      </div>
+      <div class="header-right">
+        <div class="view-toggle" role="group" aria-label="View">
+          <button type="button" class="view-btn active" data-view="all">All</button>
+          <button type="button" class="view-btn" data-view="work">Work</button>
+        </div>
+        <div id="auth-box" class="auth-box"></div>
       </div>
     </header>
+    <main id="board" class="board"></main>
   </div>
-  <script src="app.js"></script>
+  <script src="config.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>

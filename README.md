@@ -1,45 +1,29 @@
 # Catch-all board
 
-A calm dark kanban for Amber’s catch-all list. Static files only — no server required for the standalone build.
+Living visual Catch-all for Amber. Hosted on GitHub Pages with Supabase sync.
+
+## Open
+
+https://acmpcm.github.io/catch-all-board/
+
+Work-only view (hides personal/estate):  
+https://acmpcm.github.io/catch-all-board/?view=work
+
+## Mark done (syncs everywhere)
+
+1. Open the board.
+2. Enter your email → **Sign in to edit**.
+3. Click the magic link in email.
+4. Check a card to mark done (or uncheck to undo). Changes sync to phone and laptop.
+
+Viewing does not require sign-in. Editing does (so strangers on the public URL cannot clear your board).
 
 ## Files
 
-| File | Purpose |
-|------|---------|
-| `index.html` | Multi-file app entry |
-| `styles.css` | Dark UI styles |
-| `app.js` | Loads `board.json`, All/Work toggle |
-| `board.json` | Seed / live board data (do not invent items) |
-| `board-standalone.html` | One-file version (CSS + JS + JSON inlined) |
-| `preview.png` | Headless Chrome screenshot |
+- `index.html` / `styles.css` / `app.js` — UI
+- `config.js` — Supabase URL + anon key (public)
+- `board.json` — original seed snapshot (live data is in Supabase)
 
-## How to open
+## Update content
 
-**Standalone (easiest)** — double-click or open in browser:
-
-```
-file:///…/catchall-app/board-standalone.html
-```
-
-Works via `file://` and after a Drive download. Privacy toggle and `?view=work` still work.
-
-**Multi-file** — needs HTTP (browsers block `fetch` of `board.json` on `file://`):
-
-```bash
-cd catchall-app
-python3 -m http.server 8765
-# then open http://localhost:8765/
-```
-
-Or open `index.html` from any static host / local server.
-
-## Work view
-
-- UI: tap **Work** in the header (hides `privacy: "personal"` items).
-- URL: add `?view=work` — e.g. `board-standalone.html?view=work` or `http://localhost:8765/?view=work`.
-
-## Updating
-
-Edit `board.json`, then regenerate standalone if needed (re-inline CSS/JS/JSON into `board-standalone.html`). Keep the seed structure; don’t invent cards.
-
-Updated: 2026-09-20
+HBIC upserts rows in Supabase `board_items` when the Catch-all list changes.
