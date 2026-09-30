@@ -27,3 +27,7 @@ Viewing does not require sign-in. Editing does (so strangers on the public URL c
 ## Update content
 
 HBIC upserts rows in Supabase `board_items` when the Catch-all list changes.
+
+## Work Ideas lane
+
+Lane key `ideas` (pink). Always work, so it shows in both All and Work views. The tag lives in `board_items.grp` (`connectms`, `sterling-hill`, `other`) and shows as a chip. The added date comes from the id (`idea-YYYYMMDD-slug`). When the lane is empty it shows "Text HBIC 'idea: …' to add one". See README-ideas.md in HBIC's catchall-board folder.

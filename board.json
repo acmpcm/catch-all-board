@@ -1,10 +1,10 @@
 {
   "title": "Catch-all",
-  "updated": "2026-09-20",
+  "updated": "2026-09-30",
   "lanes": [
     {
       "id": "do",
-      "label": "Do \u00b7 now",
+      "label": "Do · now",
       "color": "#ff6b4a",
       "groups": [
         {
@@ -14,30 +14,42 @@
             {
               "id": "conti-reply",
               "title": "Continental Tire",
-              "detail": "Reply to Tobias on Business Team Challenge schedule change",
-              "who": "You \u00b7 Sterling Hill",
-              "privacy": "work"
-            },
-            {
-              "id": "hinds-quote",
-              "title": "Hinds CC quote",
-              "detail": "Approve or decline Oct 6 challenge course",
-              "who": "You \u00b7 Sterling Hill",
-              "privacy": "work"
+              "detail": "Replied to Tobias; Jorge picked menu (17 ppl); request sent to Adrienne at Hinds CC",
+              "who": "You · Sterling Hill",
+              "privacy": "work",
+              "done": true,
+              "done_at": "2026-09-25T00:45:00Z"
             },
             {
               "id": "bootcamp-gaps",
               "title": "AI Bootcamp 2",
               "detail": "Catalyzer attendance gaps Nikki flagged",
-              "who": "You or Nikki \u00b7 ConnectMS",
+              "who": "You or Nikki · ConnectMS",
               "privacy": "work"
             },
             {
               "id": "accelerate",
               "title": "Accelerate",
               "detail": "Whova orders + schedule with Innovate.ms",
-              "who": "You \u00b7 ConnectMS",
+              "who": "You · ConnectMS",
               "privacy": "work"
+            },
+            {
+              "id": "janet-webinar",
+              "title": "Janet webinar reply",
+              "detail": "Drafted / sent",
+              "who": "You",
+              "privacy": "work",
+              "done": true,
+              "done_at": "2026-09-25T00:45:00Z"
+            },
+            {
+              "id": "russ-nissan-disc",
+              "title": "Russ Wagner / Nissan Canton DISC",
+              "detail": "Russ DISC (Nissan Canton, 10–12 ppl): Mon Oct 12, 11am–3pm CT, training center, bring all materials; team meal after",
+              "who": "Russ Wagner (Nissan Canton)",
+              "privacy": "work",
+              "done": false
             }
           ]
         },
@@ -60,13 +72,6 @@
               "privacy": "personal"
             },
             {
-              "id": "amazon",
-              "title": "Amazon cancel",
-              "detail": "Dad's account, deceased process, no his login",
-              "who": "You",
-              "privacy": "personal"
-            },
-            {
               "id": "car",
               "title": "Car title",
               "detail": "Keep insured; find paper title; no sell until Miller path clear",
@@ -76,19 +81,21 @@
             {
               "id": "ecu",
               "title": "ECU $211k",
-              "detail": "Note where certified check was deposited",
+              "detail": "Deposited Chase *4743 on 9/17 (hold until 9/28)",
               "who": "You",
-              "privacy": "personal"
+              "privacy": "personal",
+              "done": true,
+              "done_at": "2026-09-24T04:34:27Z"
             }
           ]
         },
         {
           "id": "life",
-          "label": "Life \u00b7 family",
+          "label": "Life · family",
           "items": [
             {
               "id": "prints",
-              "title": "Photos \u2192 prints",
+              "title": "Photos → prints",
               "detail": "Pick and order",
               "who": "You",
               "privacy": "personal"
@@ -116,29 +123,52 @@
             },
             {
               "id": "ju",
-              "title": "P \u00b7 JU",
+              "title": "P · JU",
               "detail": "Beard / Gergen / committee / next steps",
               "who": "You",
               "privacy": "personal"
             },
             {
               "id": "tmobile",
-              "title": "P \u00b7 phone",
+              "title": "P · phone",
               "detail": "Get T-Mobile working",
               "who": "You",
-              "privacy": "personal"
+              "privacy": "personal",
+              "done": true
             },
             {
               "id": "obday",
-              "title": "O \u00b7 birthday",
+              "title": "O · birthday",
               "detail": "Plans",
+              "who": "You",
+              "privacy": "personal",
+              "done": true
+            },
+            {
+              "id": "omoney",
+              "title": "O · money",
+              "detail": "Future money setup",
               "who": "You",
               "privacy": "personal"
             },
             {
-              "id": "omoney",
-              "title": "O \u00b7 money",
-              "detail": "Future money setup",
+              "id": "sew-fit",
+              "title": "Sew Fit alterations",
+              "detail": "Drop off / pick up alterations",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "insurance-beneficiaries",
+              "title": "Insurance beneficiaries",
+              "detail": "Update beneficiary info on policies",
+              "who": "You",
+              "privacy": "personal"
+            },
+            {
+              "id": "return-forme-shorts",
+              "title": "Return Forme shorts",
+              "detail": "Send back",
               "who": "You",
               "privacy": "personal"
             }
@@ -154,6 +184,12 @@
         {
           "id": "foil",
           "title": "Aluminum foil",
+          "detail": "Ready when you shop",
+          "privacy": "personal"
+        },
+        {
+          "id": "scanner",
+          "title": "Scanner",
           "detail": "Ready when you shop",
           "privacy": "personal"
         },
@@ -175,6 +211,13 @@
           "title": "Phone cleanup",
           "detail": "Unlock/sell 17 Pro; lost 16 Pro; cancel Verizon iPad; LTE Home TBD",
           "privacy": "personal"
+        },
+        {
+          "id": "houseboat-catamaran",
+          "title": "Houseboat",
+          "detail": "Used catamaran-style, good condition (Deal Scout hunting)",
+          "who": "Deal Scout",
+          "privacy": "personal"
         }
       ]
     },
@@ -192,7 +235,7 @@
         {
           "id": "phone-map",
           "title": "Phone plan map",
-          "detail": "Verizon + T-Mobile \u2192 go / park",
+          "detail": "Verizon + T-Mobile → go / park",
           "privacy": "personal"
         },
         {
@@ -220,6 +263,12 @@
           "privacy": "personal"
         },
         {
+          "id": "car-insurance",
+          "title": "Car insurance",
+          "detail": "Shop rates / coverage",
+          "privacy": "personal"
+        },
+        {
           "id": "azores",
           "title": "Azores",
           "detail": "Deepen when dates/who/budget known",
@@ -241,7 +290,40 @@
           "id": "leesburg",
           "title": "Leesburg VA RFP",
           "detail": "Only if interested",
-          "privacy": "work"
+          "privacy": "work",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "ideas",
+      "label": "Work Ideas",
+      "color": "#f472b6",
+      "always_work": true,
+      "tags": [
+        "ConnectMS",
+        "Sterling Hill",
+        "Other"
+      ],
+      "empty_hint": "Text HBIC 'idea: …' to add one",
+      "items": [
+        {
+          "id": "idea-20260930-grow-smart",
+          "title": "Grow Smart (GA SBDC program)",
+          "detail": "Look at Georgia SBDC's Grow Smart program as a model",
+          "tag": "ConnectMS",
+          "who": "HBIC/Amber",
+          "privacy": "work",
+          "added": "2026-09-30"
+        },
+        {
+          "id": "idea-20260930-sbdc-scan",
+          "title": "Scan SBDC programs nationwide",
+          "detail": "Look at other SBDC programs across the country for models to bring to ConnectMS",
+          "tag": "ConnectMS",
+          "who": "HBIC/Amber",
+          "privacy": "work",
+          "added": "2026-09-30"
         }
       ]
     },
@@ -251,34 +333,102 @@
       "color": "#ffc857",
       "items": [
         {
+          "id": "hinds-quote",
+          "title": "Conti BTC Oct 7 · Eagle Ridge",
+          "detail": "Conti BTC Oct 7 — quote APPROVED 9/28; waiting on Hinds (Adrienne): advance payment?, Oct 6 walkthrough, 7am access; then reply to Jorge.",
+          "who": "Adrienne → You · Sterling Hill",
+          "privacy": "work",
+          "done": false
+        },
+        {
+          "id": "melinda-oct23-offsite",
+          "title": "Melinda / Oct 23 offsite",
+          "detail": "Final confirmation received 9/24; Oct 23 offsite confirmed",
+          "who": "Melinda (Nissan)",
+          "privacy": "work",
+          "done": true,
+          "done_at": "2026-09-24T00:00:00Z"
+        },
+        {
+          "id": "katie-ssbci-capitalize",
+          "title": "Katie Self / SSBCI",
+          "detail": "Can any SSBCI funds cover ~$4k for Oct Capitalize event? Follow-up sent 9/24",
+          "who": "Katie Self (SSBCI)",
+          "privacy": "work"
+        },
+        {
+          "id": "amazon",
+          "title": "Amazon bereavement",
+          "detail": "Prime cancel + unused-months refund (emailed 9/21 w/ DC)",
+          "who": "Amazon bereavement support",
+          "privacy": "personal"
+        },
+        {
           "id": "miller",
           "title": "Miller + Coinbase",
-          "detail": "Muniment ~4 mo; Case #27523536 email sent 9/20",
+          "detail": "Coinbase path (muniment for house; letters vs full probate); emailed 9/21",
+          "privacy": "personal"
+        },
+        {
+          "id": "coinbase-case",
+          "title": "Coinbase #27523536",
+          "detail": "Reply + DC in; probate path from Miller",
           "privacy": "personal"
         },
         {
           "id": "pod",
           "title": "POD claims",
-          "detail": "First Bank (2); Primerica mail; VRS/Securian #1920815",
+          "detail": "First Bank & Trust (2) — Closed 9/28: $85,972.31 + $182,249.91; Primerica forms by mail",
           "privacy": "personal"
         },
         {
+          "id": "securian-vrs",
+          "title": "Securian/VRS #1920815",
+          "detail": "Paid $34,075.99 to Ally 9/24",
+          "privacy": "personal",
+          "done": true,
+          "done_at": "2026-09-27T21:47:33Z"
+        },
+        {
           "id": "therabody",
-          "title": "Therabody \u2192 mask",
-          "detail": "Recall conf 7NQWVWJ7; watch $100 credit",
+          "title": "Therabody → mask",
+          "detail": "Recall conf 7NQWVWJ7; store credit confirmed 9/21 → then red light mask",
           "privacy": "personal"
         },
         {
           "id": "cal",
           "title": "Calendar",
-          "detail": "ScaleUp Oct 14; MEDC Nov 4\u20135; Nissan ~Sep 22",
+          "detail": "ScaleUp Oct 14; MEDC Nov 4–5",
           "privacy": "work"
         },
         {
           "id": "money-in",
           "title": "Money inbound",
-          "detail": "State Farm; Duke $1.3k+; dad SF $147; Oakmont",
+          "detail": "Duke $1.3k+; dad State Farm $147 (~early Nov); Oakmont (~early Nov)",
           "privacy": "personal"
+        },
+        {
+          "id": "plaud",
+          "title": "Plaud batch 7",
+          "detail": "Batch 7 filed; 5 work summary PDFs to Drive (needs Google sign-in); keep batching Unfiled",
+          "who": "HBIC",
+          "privacy": "work"
+        },
+        {
+          "id": "nissan-canton",
+          "title": "Nissan Canton",
+          "detail": "Tue Sep 22 — done",
+          "privacy": "work",
+          "done": true,
+          "done_at": "2026-09-24T04:34:27Z"
+        },
+        {
+          "id": "sf-you-rebate",
+          "title": "State Farm (you) rebate",
+          "detail": "PayPal ~$392.99 received",
+          "privacy": "personal",
+          "done": true,
+          "done_at": "2026-09-24T04:35:30Z"
         }
       ]
     },
@@ -287,13 +437,6 @@
       "label": "Later",
       "color": "#c084fc",
       "items": [
-        {
-          "id": "plaud",
-          "title": "Plaud Unfiled",
-          "detail": "Keep batching",
-          "who": "HBIC",
-          "privacy": "work"
-        },
         {
           "id": "portal",
           "title": "Leadership portal",
@@ -309,7 +452,7 @@
         {
           "id": "dba",
           "title": "DBA year 3",
-          "detail": "Belhaven \u00b7 assignment TBD",
+          "detail": "Belhaven · assignment TBD",
           "privacy": "personal"
         },
         {
@@ -352,7 +495,7 @@
         {
           "id": "offgrid",
           "title": "Off-grid hotel",
-          "detail": "Private lodge 8\u201312 instead",
+          "detail": "Private lodge 8–12 instead",
           "privacy": "personal"
         },
         {
@@ -360,6 +503,13 @@
           "title": "Separate Plaud bot",
           "detail": "Until recipe stable",
           "privacy": "work"
+        },
+        {
+          "id": "plaud-map",
+          "title": "Plaud Skills / Event map",
+          "detail": "Drafted 9/18 for October Intelligence",
+          "privacy": "work",
+          "done": true
         }
       ]
     }

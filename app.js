@@ -8,10 +8,38 @@ const LANE_META = [
   ]},
   { id: "buy", label: "Buy", color: "#3dd6c6" },
   { id: "look", label: "Look into", color: "#7c9cff" },
+  // Work Ideas: always work (never hidden in Work view). Tag lives in board_items.grp.
+  { id: "ideas", label: "Work Ideas", color: "#f472b6", alwaysWork: true, tagged: true,
+    emptyHint: "Text HBIC \u2018idea: \u2026\u2019 to add one" },
   { id: "waiting", label: "Waiting", color: "#ffc857" },
   { id: "later", label: "Later", color: "#c084fc" },
   { id: "parked", label: "Parked", color: "#6b7280" },
 ];
+
+// Idea tags. Stored in board_items.grp (no schema change); a future `tag` column also works.
+const IDEA_TAGS = {
+  connectms: { label: "ConnectMS", color: "#3dd6c6" },
+  "sterling-hill": { label: "Sterling Hill", color: "#ffc857" },
+  other: { label: "Other", color: "#9aa3b2" },
+};
+const ALWAYS_WORK_LANES = new Set(LANE_META.filter((m) => m.alwaysWork).map((m) => m.id));
+
+function ideaTag(item) {
+  const raw = String(item.tag || item.grp || "other").trim().toLowerCase().replace(/\s+/g, "-");
+  return IDEA_TAGS[raw] || { label: item.tag || item.grp || "Other", color: IDEA_TAGS.other.color };
+}
+
+function ideaAdded(item) {
+  if (item.added) return String(item.added).slice(0, 10);
+  const m = /^idea-(\d{4})(\d{2})(\d{2})-/.exec(item.id || "");
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : "";
+}
+
+function shortDate(iso) {
+  if (!iso) return "";
+  const d = new Date(iso + "T12:00:00");
+  return isNaN(d) ? iso : d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
 
 const cfg = window.CATCHALL_CONFIG;
 if (!cfg?.supabaseUrl || !cfg?.supabaseAnonKey) {
@@ -48,9 +76,13 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
+function isWorkItem(item) {
+  return ALWAYS_WORK_LANES.has(item.lane) || item.privacy !== "personal";
+}
+
 function itemVisible(item) {
   if (item.done) return true; // filtered by section
-  if (currentView === "work") return item.privacy !== "personal";
+  if (currentView === "work") return isWorkItem(item);
   return true;
 }
 
@@ -60,7 +92,7 @@ function openItems() {
 
 function doneItems() {
   return items
-    .filter((i) => i.done && (currentView !== "work" || i.privacy !== "personal"))
+    .filter((i) => i.done && (currentView !== "work" || isWorkItem(i)))
     .sort((a, b) => String(b.done_at || "").localeCompare(String(a.done_at || "")));
 }
 
@@ -133,7 +165,14 @@ function renderAuth() {
 }
 
 function renderCard(item, laneColor) {
-  const who = item.who ? `<span class="card-who">${escapeHtml(item.who)}</span>` : "";
+  let who = item.who ? `<span class="card-who">${escapeHtml(item.who)}</span>` : "";
+  if (item.lane === "ideas") {
+    const t = ideaTag(item);
+    const added = ideaAdded(item);
+    who = `<div class="card-chips"><span class="tag-chip" style="--tag-color:${t.color}">${escapeHtml(t.label)}</span>` +
+      (item.who ? `<span class="card-who">${escapeHtml(item.who)}</span>` : "") +
+      (added ? `<span class="card-added">added ${escapeHtml(shortDate(added))}</span>` : "") + `</div>`;
+  }
   const detail = item.detail
     ? `<div class="card-detail">${escapeHtml(item.detail)}</div>`
     : `<div class="card-detail"></div>`;
@@ -151,6 +190,7 @@ function renderCard(item, laneColor) {
 function renderOpenLanes(root) {
   for (const meta of LANE_META) {
     const laneItems = openItems().filter((i) => i.lane === meta.id);
+    const emptyHint = meta.emptyHint || "Nothing in this view";
     const color = meta.color;
     let body = "";
     if (meta.groups) {
@@ -166,10 +206,10 @@ function renderOpenLanes(root) {
     } else {
       body = laneItems.length
         ? laneItems.map((c) => renderCard(c, color)).join("")
-        : `<div class="empty-hint">Nothing in this view</div>`;
+        : `<div class="empty-hint">${escapeHtml(emptyHint)}</div>`;
     }
     root.insertAdjacentHTML("beforeend", `
-      <section class="lane" data-lane="${meta.id}">
+      <section class="lane" data-lane="${meta.id}" style="--lane-color:${color}">
         <div class="lane-header">
           <span class="lane-dot" style="background:${color}"></span>
           <span class="lane-title">${escapeHtml(meta.label)}</span>
@@ -201,6 +241,16 @@ function renderDone(root) {
   };
 }
 
+function renderCounts() {
+  const el = document.getElementById("counts");
+  if (!el) return;
+  const open = openItems();
+  el.innerHTML = LANE_META.map((m) => {
+    const n = open.filter((i) => i.lane === m.id).length;
+    return `<span class="count-pill" data-lane="${m.id}" style="--lane-color:${m.color}"><span class="n">${n}</span>${escapeHtml(m.label.split("·")[0].trim())}</span>`;
+  }).join("");
+}
+
 function render() {
   const open = openItems().length;
   const done = doneItems().length;
@@ -213,6 +263,7 @@ function render() {
   });
 
   renderAuth();
+  renderCounts();
   const board = document.getElementById("board");
   board.innerHTML = "";
   renderOpenLanes(board);

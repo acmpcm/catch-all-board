@@ -395,3 +395,22 @@ body {
   .header { flex-direction: column; align-items: flex-start; gap: 10px; }
   .header-right { width: 100%; justify-content: flex-start; }
 }
+
+/* Work Ideas lane + header count strip (2026-09-30) */
+:root { --ideas: #f472b6; }
+.header-left .counts { margin-top: 0.35rem; }
+.count-pill { border-color: color-mix(in srgb, var(--lane-color, #888) 45%, transparent); }
+.count-pill .n { color: var(--lane-color, var(--text)); }
+.count-pill[data-lane="ideas"] { border-color: color-mix(in srgb, var(--ideas) 45%, transparent); }
+.lane[data-lane="ideas"] { border-color: color-mix(in srgb, var(--ideas) 35%, transparent); }
+.card-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin-top: 0.5rem; }
+.card-chips .card-who { margin-top: 0; }
+.tag-chip {
+  display: inline-flex; align-items: center;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.02em;
+  padding: 0.15rem 0.5rem; border-radius: 999px;
+  color: var(--tag-color, #9aa3b2);
+  background: color-mix(in srgb, var(--tag-color, #9aa3b2) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tag-color, #9aa3b2) 45%, transparent);
+}
+.card-added { font-size: 0.68rem; color: var(--text-faint); }
